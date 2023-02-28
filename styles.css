@@ -1,0 +1,61 @@
+.answer {
+    border: 5px solid black;
+    border-left-width: 3vmax;
+    border-right-width: 3vmax;
+    text-align: center;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.ball {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    text-align:center;
+    font-family: 'Averia Libre';
+}
+
+button{
+     padding: 25px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.changeSize{
+    background-color: #8fb8f7;
+}
+
+.changeColor{
+     background-color: #e9f78f;
+}
+.sayWeather{
+    background-color:#f7da7c;
+}
+.sayCity{
+    background-color:#f277f0;
+}
+.changeText{
+    background-color:#6ff2e5;
+}
+.suggestLunch{
+    background-color:#f578b8;
+}
+.sayNumber{
+    background-color:#f7f560;
+}
+.changePicture{
+    background-color:#96e3ff;
+    
+}
+
+body{
+    font-family: 'Averia Libre';
+}
+
+button{
+    font-family: 'Averia Libre';
+}
