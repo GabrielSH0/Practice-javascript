@@ -1,0 +1,151 @@
+<!DOCTYPE html> <html><head>
+        <title>Practice javascript</title>
+        <link href="https://fonts.googleapis.com/css?family=Averia Libre" rel="stylesheet">
+    <style>.answer {
+    border: 5px solid black;
+    border-left-width: 3vmax;
+    border-right-width: 3vmax;
+    text-align: center;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.ball {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    text-align:center;
+    font-family: 'Averia Libre';
+}
+
+button{
+     padding: 25px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.changeSize{
+    background-color: #8fb8f7;
+}
+
+.changeColor{
+     background-color: #e9f78f;
+}
+.sayWeather{
+    background-color:#f7da7c;
+}
+.sayCity{
+    background-color:#f277f0;
+}
+.changeText{
+    background-color:#6ff2e5;
+}
+.suggestLunch{
+    background-color:#f578b8;
+}
+.sayNumber{
+    background-color:#f7f560;
+}
+.changePicture{
+    background-color:#96e3ff;
+    
+}
+
+body{
+    font-family: 'Averia Libre';
+}
+
+button{
+    font-family: 'Averia Libre';
+}
+</style></head>
+    <body>
+        <h1 class="header">The Crystal Ball of Truth! </h1>
+        <h2> This crystal ball knows all and can do all! Click the buttons below to see for yourself!</h2>
+        <div class="answer">Ask away! I can do or answer anything!</div>
+        
+        <img class="ball" src="https://thumbs.dreamstime.com/b/blank-crystal-ball-white-background-fortune-teller-s-36824063.jpg">
+        <button class="changeSize"> Can you make yourself giant?</button>
+       
+        <button class="changeColor">Can you change the color of this webpage?</button>
+      
+        <button class="sayWeather"> What's the weather like right now?</button>
+       
+        <button class="sayCity">Where am I from?</button>
+       
+        <button class="changeText">Can you change the color of the text on this page?</button>
+       
+        <button class="suggestLunch"> What should I have for lunch?</button>
+       
+      <input placeholder="Put secret number!">  <button class="sayNumber">Can you tell me what number I just entered?</button>
+    
+        <button class="changePicture"> Can you change what you look like?</button>
+        
+        
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var answerDiv = document.querySelector(".answer");
+var image = document.querySelector(".ball");
+var body = document.querySelector("body");
+var changeSize = document.querySelector(".changeSize");
+var changeColor = document.querySelector(".changeColor");
+var sayWeather = document.querySelector(".sayWeather");
+var sayCity = document.querySelector(".sayCity");
+var changeText = document.querySelector(".changeText");
+var suggestLunch = document.querySelector(".suggestLunch");
+var sayNumber = document.querySelector(".sayNumber");
+var changePicture = document.querySelector(".changePicture");
+
+sayWeather.onclick = function () {
+  //Write the code for Code Along Part 1 below
+  answerDiv.innerHTML = "The weather is sunny";
+};
+
+sayCity.onclick = function () {
+  //Write the code for Code It Solo Part 1 below
+  answerDiv.innerHTML = "I live in São Paulo";
+};
+
+changeSize.onclick = function () {
+  //Write the code for Code Along Part 2 below!
+  image.style.width = "500px";
+};
+
+changeColor.onclick = function () {
+  //Write the code for Code It Solo Part 2 below!
+  body.style.backgroundColor = "green";
+}; // Problem 1
+
+
+changeText.onclick = function () {
+  //Write the code for Code It Solo Part 3 Problem 1 below
+  body.style.color = "blue";
+}; //Problem 2
+
+
+suggestLunch.onclick = function () {
+  //Write the code for Code It Solo Part 3 Problem 2 below
+  answerDiv.innerHTML = "You should eat a sandwich for lunch";
+}; //SPICY (Optional): Problem 3
+
+
+sayNumber.onclick = function () {
+  var secretNumber = document.querySelector("input").value; //this is saving the value of whatever the user types in as their secrete number
+  //Write the code for Spicy Problem 3 below
+
+  answerDiv.innerHTML = secretNumber;
+}; //SPICY (Optional): Problem 4
+
+
+changePicture.onclick = function () {
+  //Write the code for Spicy Problem 4 below. Remember to use .src!
+  image.src = "https://expertphotography.b-cdn.net/wp-content/uploads/2021/05/expart_photography_crystall_ball_blue_hour.jpg";
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImFuc3dlckRpdiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImltYWdlIiwiYm9keSIsImNoYW5nZVNpemUiLCJjaGFuZ2VDb2xvciIsInNheVdlYXRoZXIiLCJzYXlDaXR5IiwiY2hhbmdlVGV4dCIsInN1Z2dlc3RMdW5jaCIsInNheU51bWJlciIsImNoYW5nZVBpY3R1cmUiLCJvbmNsaWNrIiwiaW5uZXJIVE1MIiwic3R5bGUiLCJ3aWR0aCIsImJhY2tncm91bmRDb2xvciIsImNvbG9yIiwic2VjcmV0TnVtYmVyIiwidmFsdWUiLCJzcmMiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLFNBQVMsR0FBQ0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWQ7QUFDQSxJQUFJQyxLQUFLLEdBQUNGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixPQUF2QixDQUFWO0FBQ0EsSUFBSUUsSUFBSSxHQUFDSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsTUFBdkIsQ0FBVDtBQUNBLElBQUlHLFVBQVUsR0FBQ0osUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLENBQWY7QUFDQSxJQUFJSSxXQUFXLEdBQUNMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixjQUF2QixDQUFoQjtBQUNBLElBQUlLLFVBQVUsR0FBQ04sUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLENBQWY7QUFDQSxJQUFJTSxPQUFPLEdBQUNQLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFaO0FBQ0EsSUFBSU8sVUFBVSxHQUFDUixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsYUFBdkIsQ0FBZjtBQUNBLElBQUlRLFlBQVksR0FBQ1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLGVBQXZCLENBQWpCO0FBQ0EsSUFBSVMsU0FBUyxHQUFDVixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsQ0FBZDtBQUNBLElBQUlVLGFBQWEsR0FBQ1gsUUFBUSxDQUFDQyxhQUFULENBQXVCLGdCQUF2QixDQUFsQjs7QUFFQUssVUFBVSxDQUFDTSxPQUFYLEdBQW1CLFlBQVU7QUFDekI7QUFDQWIsRUFBQUEsU0FBUyxDQUFDYyxTQUFWLEdBQW9CLHNCQUFwQjtBQUNILENBSEQ7O0FBS0FOLE9BQU8sQ0FBQ0ssT0FBUixHQUFnQixZQUFVO0FBQ3RCO0FBQ0FiLEVBQUFBLFNBQVMsQ0FBQ2MsU0FBVixHQUFvQixxQkFBcEI7QUFDSCxDQUhEOztBQUtBVCxVQUFVLENBQUNRLE9BQVgsR0FBbUIsWUFBVTtBQUN6QjtBQUNBVixFQUFBQSxLQUFLLENBQUNZLEtBQU4sQ0FBWUMsS0FBWixHQUFrQixPQUFsQjtBQUNILENBSEQ7O0FBS0FWLFdBQVcsQ0FBQ08sT0FBWixHQUFvQixZQUFVO0FBQzFCO0FBQ0FULEVBQUFBLElBQUksQ0FBQ1csS0FBTCxDQUFXRSxlQUFYLEdBQTJCLE9BQTNCO0FBQ0gsQ0FIRCxDLENBT0E7OztBQUNBUixVQUFVLENBQUNJLE9BQVgsR0FBbUIsWUFBVTtBQUN6QjtBQUNBVCxFQUFBQSxJQUFJLENBQUNXLEtBQUwsQ0FBV0csS0FBWCxHQUFpQixNQUFqQjtBQUNILENBSEQsQyxDQUtBOzs7QUFDQVIsWUFBWSxDQUFDRyxPQUFiLEdBQXFCLFlBQVU7QUFDM0I7QUFDQWIsRUFBQUEsU0FBUyxDQUFDYyxTQUFWLEdBQW9CLHFDQUFwQjtBQUNILENBSEQsQyxDQUtBOzs7QUFDQUgsU0FBUyxDQUFDRSxPQUFWLEdBQWtCLFlBQVU7QUFDM0IsTUFBSU0sWUFBWSxHQUFDbEIsUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLEVBQWdDa0IsS0FBakQsQ0FEMkIsQ0FDNkI7QUFDekQ7O0FBQ0lwQixFQUFBQSxTQUFTLENBQUNjLFNBQVYsR0FBb0JLLFlBQXBCO0FBQ0gsQ0FKRCxDLENBTUE7OztBQUNBUCxhQUFhLENBQUNDLE9BQWQsR0FBc0IsWUFBVTtBQUM1QjtBQUNBVixFQUFBQSxLQUFLLENBQUNrQixHQUFOLEdBQVUsK0dBQVY7QUFDSCxDQUhEIiwic291cmNlc0NvbnRlbnQiOlsibGV0IGFuc3dlckRpdj1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmFuc3dlclwiKTsgXG5sZXQgaW1hZ2U9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5iYWxsXCIpO1xubGV0IGJvZHk9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJvZHlcIik7XG5sZXQgY2hhbmdlU2l6ZT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmNoYW5nZVNpemVcIik7XG5sZXQgY2hhbmdlQ29sb3I9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jaGFuZ2VDb2xvclwiKTsgXG5sZXQgc2F5V2VhdGhlcj1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNheVdlYXRoZXJcIik7XG5sZXQgc2F5Q2l0eT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNheUNpdHlcIik7XG5sZXQgY2hhbmdlVGV4dD1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmNoYW5nZVRleHRcIik7XG5sZXQgc3VnZ2VzdEx1bmNoPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc3VnZ2VzdEx1bmNoXCIpO1xubGV0IHNheU51bWJlcj1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNheU51bWJlclwiKTtcbmxldCBjaGFuZ2VQaWN0dXJlPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuY2hhbmdlUGljdHVyZVwiKTtcblxuc2F5V2VhdGhlci5vbmNsaWNrPWZ1bmN0aW9uKCl7XG4gICAgLy9Xcml0ZSB0aGUgY29kZSBmb3IgQ29kZSBBbG9uZyBQYXJ0IDEgYmVsb3dcbiAgICBhbnN3ZXJEaXYuaW5uZXJIVE1MPVwiVGhlIHdlYXRoZXIgaXMgc3VubnlcIjtcbn07XG5cbnNheUNpdHkub25jbGljaz1mdW5jdGlvbigpe1xuICAgIC8vV3JpdGUgdGhlIGNvZGUgZm9yIENvZGUgSXQgU29sbyBQYXJ0IDEgYmVsb3dcbiAgICBhbnN3ZXJEaXYuaW5uZXJIVE1MPVwiSSBsaXZlIGluIFPDo28gUGF1bG9cIjtcbn07XG5cbmNoYW5nZVNpemUub25jbGljaz1mdW5jdGlvbigpe1xuICAgIC8vV3JpdGUgdGhlIGNvZGUgZm9yIENvZGUgQWxvbmcgUGFydCAyIGJlbG93IVxuICAgIGltYWdlLnN0eWxlLndpZHRoPVwiNTAwcHhcIjtcbn07XG5cbmNoYW5nZUNvbG9yLm9uY2xpY2s9ZnVuY3Rpb24oKXtcbiAgICAvL1dyaXRlIHRoZSBjb2RlIGZvciBDb2RlIEl0IFNvbG8gUGFydCAyIGJlbG93IVxuICAgIGJvZHkuc3R5bGUuYmFja2dyb3VuZENvbG9yPVwiZ3JlZW5cIjtcbn07XG5cblxuXG4vLyBQcm9ibGVtIDFcbmNoYW5nZVRleHQub25jbGljaz1mdW5jdGlvbigpe1xuICAgIC8vV3JpdGUgdGhlIGNvZGUgZm9yIENvZGUgSXQgU29sbyBQYXJ0IDMgUHJvYmxlbSAxIGJlbG93XG4gICAgYm9keS5zdHlsZS5jb2xvcj1cImJsdWVcIjtcbn07XG5cbi8vUHJvYmxlbSAyXG5zdWdnZXN0THVuY2gub25jbGljaz1mdW5jdGlvbigpe1xuICAgIC8vV3JpdGUgdGhlIGNvZGUgZm9yIENvZGUgSXQgU29sbyBQYXJ0IDMgUHJvYmxlbSAyIGJlbG93XG4gICAgYW5zd2VyRGl2LmlubmVySFRNTD1cIllvdSBzaG91bGQgZWF0IGEgc2FuZHdpY2ggZm9yIGx1bmNoXCI7XG59O1xuXG4vL1NQSUNZIChPcHRpb25hbCk6IFByb2JsZW0gM1xuc2F5TnVtYmVyLm9uY2xpY2s9ZnVuY3Rpb24oKXtcbiBsZXQgc2VjcmV0TnVtYmVyPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJpbnB1dFwiKS52YWx1ZTsgLy90aGlzIGlzIHNhdmluZyB0aGUgdmFsdWUgb2Ygd2hhdGV2ZXIgdGhlIHVzZXIgdHlwZXMgaW4gYXMgdGhlaXIgc2VjcmV0ZSBudW1iZXJcbi8vV3JpdGUgdGhlIGNvZGUgZm9yIFNwaWN5IFByb2JsZW0gMyBiZWxvd1xuICAgIGFuc3dlckRpdi5pbm5lckhUTUw9c2VjcmV0TnVtYmVyO1xufTtcblxuLy9TUElDWSAoT3B0aW9uYWwpOiBQcm9ibGVtIDRcbmNoYW5nZVBpY3R1cmUub25jbGljaz1mdW5jdGlvbigpe1xuICAgIC8vV3JpdGUgdGhlIGNvZGUgZm9yIFNwaWN5IFByb2JsZW0gNCBiZWxvdy4gUmVtZW1iZXIgdG8gdXNlIC5zcmMhXG4gICAgaW1hZ2Uuc3JjPVwiaHR0cHM6Ly9leHBlcnRwaG90b2dyYXBoeS5iLWNkbi5uZXQvd3AtY29udGVudC91cGxvYWRzLzIwMjEvMDUvZXhwYXJ0X3Bob3RvZ3JhcGh5X2NyeXN0YWxsX2JhbGxfYmx1ZV9ob3VyLmpwZ1wiO1xufTtcblxuIl19</script></body></html>
